@@ -66,7 +66,7 @@ ErrorCode calculate(const char* input, double* out) {
             }
             else if (operations[i] == '/') {
                 if (numbers[i + 1] == 0) {
-                    return DIVIDE_BY_ZERO; // деление на ноль
+                    return DIVIDE_BY_ZERO; // деление на ноль ошибка
                 }
                 result = numbers[i] / numbers[i + 1];
             }
