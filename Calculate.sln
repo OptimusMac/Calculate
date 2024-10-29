@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculate", "Calculate.csproj", "{76B53404-8BA7-4C53-8B90-EA41F15F9612}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{235804A6-A430-4168-A942-FDFF4DEA3F33}"
+	ProjectSection(SolutionItems) = preProject
+		dependencies\CalcBackend.dll = dependencies\CalcBackend.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Debug|x64.ActiveCfg = Debug|x64
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Debug|x64.Build.0 = Debug|x64
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Release|x64.ActiveCfg = Release|x64
+		{76B53404-8BA7-4C53-8B90-EA41F15F9612}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40CE71E3-D602-4F30-921D-A080EF117ABF}
+	EndGlobalSection
+EndGlobal
