@@ -36,7 +36,7 @@ ErrorCode calculate(const char* input, double* out) {
             if (bufferIndex > 0) {
                 buffer[bufferIndex] = '\0';
                 if (sscanf_s(buffer, "%lf", &numbers[numCount++]) != 1) {
-                    return BUFFER_OVERFLOW; // Ошибка при преобразовании
+                    return BUFFER_OVERFLOW; // ошибка при преобразовании
                 }
                 bufferIndex = 0;
             }
@@ -46,18 +46,18 @@ ErrorCode calculate(const char* input, double* out) {
         }
 
         if (bufferIndex >= sizeof(buffer) - 1) {
-            return BUFFER_OVERFLOW; // Переполнение буфера
+            return BUFFER_OVERFLOW; // переполнение буфера
         }
     }
 
     if (bufferIndex > 0) {
         buffer[bufferIndex] = '\0';
         if (sscanf_s(buffer, "%lf", &numbers[numCount++]) != 1) {
-            return BUFFER_OVERFLOW; // Ошибка при преобразовании
+            return BUFFER_OVERFLOW; // ошибка при преобразовании
         }
     }
 
-    // Обработка операций с учетом приоритета
+    // обработка операций с учетом приоритета
     for (int i = 0; i < opCount; ++i) {
         if (operations[i] == '*' || operations[i] == '/' || operations[i] == '^') {
             double result = 0;
@@ -66,7 +66,7 @@ ErrorCode calculate(const char* input, double* out) {
             }
             else if (operations[i] == '/') {
                 if (numbers[i + 1] == 0) {
-                    return DIVIDE_BY_ZERO; // Деление на ноль
+                    return DIVIDE_BY_ZERO; // деление на ноль
                 }
                 result = numbers[i] / numbers[i + 1];
             }
@@ -74,7 +74,7 @@ ErrorCode calculate(const char* input, double* out) {
                 result = pow(numbers[i], numbers[i + 1]);
             }
 
-            // Сдвинуть числа и операции
+            // здвинуть числа и операции
             for (int j = i + 1; j < numCount - 1; ++j) {
                 numbers[j] = numbers[j + 1];
             }
@@ -84,7 +84,7 @@ ErrorCode calculate(const char* input, double* out) {
             numbers[i] = result;
             numCount--;
             opCount--;
-            i--; // Повторно проверьте текущую позицию
+            i--; // повторно проверьте текущую позицию
         }
     }
 
